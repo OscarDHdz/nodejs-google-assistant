@@ -22,8 +22,12 @@ const NUMBER_ARGUMENT = 'number';
 app.post('/', (request, response) => {
 
   const app = new App({request, response});
-  console.log('Request headers: ' + JSON.stringify(request.headers));
-  console.log('Request body: ' + JSON.stringify(request.body));
+
+  console.log(`[36m%s[0m`, `Request Headers:`);
+  console.log( JSON.stringify(request.headers, undefined, 2) );
+  console.log(`[36m%s[0m`, `Request Body`);
+  console.log( JSON.stringify(request.body, undefined, 2) );
+
 
 
   // c. The function that generates the silly name
